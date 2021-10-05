@@ -11,7 +11,7 @@
   </div>
   <input type="hidden" :value="setToLocalStorage" />
   <!-- Set to localstorage  -->
-  <footer style="position: absolute; bottom: 0px;">
+  <footer style="position: absolute; bottom: 0px; text-align: center; display: block; margin: 3px auto;">
     Copyright&copy; Made By Fahad
   </footer>
 </template>
