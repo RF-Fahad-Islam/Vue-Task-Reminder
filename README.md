@@ -1,8 +1,9 @@
-# task-reminder
-
+# Task Reminder
+**A simple tasks app made with vue framework**
+Checkout the app here : [Task-Reminder](https://tasks-reminder.netlify.app/)
 ## Project setup
 ```
-npm install
+npm install @vue/cli
 ```
 
 ### Compiles and hot-reloads for development
