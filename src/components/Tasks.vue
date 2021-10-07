@@ -10,6 +10,9 @@
     {{ showAddTask ? "Close" : "Add Task" }}
   </button>
 
+  <!-- !Delete Button -->
+  <button class="btn" @click="$emit('delete-all')" v-if="tasks.length > 1" style="background-color: #ff4747; color: white;"> <i class="fa fa-trash"></i> Delete All</button>
+
   <!-- !Form for adding Tasks -->
   <transition
     name="custom-classes-transition"

@@ -6,6 +6,7 @@
         @toggle-reminder="toggleReminder"
         @add-task="addTask"
         @delete-task="deleteTask"
+        @delete-all="deleteAll"
         :tasks="tasks"
         :taskId="taskId"
       />
@@ -61,6 +62,12 @@ export default {
       );
       console.log("task", this.tasks);
     },
+    deleteAll(){
+      let confirmation = confirm("Do you really want to delete all tasks?")
+      if(confirmation){
+        this.tasks = [];
+      }
+    }
   },
   computed: {
     setToLocalStorage: function () {
@@ -70,7 +77,7 @@ export default {
   },
   created() {
     this.tasks = this.tasksArr || this.tasksArr == [] ? this.tasksArr : [];
-    this.taskId = this.tasks.length>0? (this.tasks[this.tasks.length - 1].id)+1: 1
+    this.taskId = this.tasks.length>0? (this.tasks[0].id)+1: 1
   },
 };
 </script>
