@@ -35,6 +35,9 @@
 
   <!-- !Task Cards -->
   <div class="scrollable">
+    <transition-group name="custom-classes-transition"
+    enter-active-class="animated slideInDown"
+    leave-active-class="animated zoomOut" tag="div">
     <div v-for="task in tasks" :key="task.id">
       <Task
         @delete-task="deleteEmit"
@@ -42,6 +45,7 @@
         :task="task"
       />
     </div>
+    </transition-group>
   </div>
 </template>
 
